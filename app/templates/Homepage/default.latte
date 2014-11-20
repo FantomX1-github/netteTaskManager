@@ -1,0 +1,20 @@
+{block content}
+
+<h1 n:block="title">Task manager</h1>
+
+<div n:foreach="$tasks as $task" >
+    <div class="desc">{$task->desc}</div>
+
+    <h2>
+      
+      <a n:href="Create:show $task->task_id">{$task->name}</a>
+    
+      <a n:href="Create:edit $task->task_id">Edit</a>
+      
+    </h2>
+
+ 
+</div>
+
+
+<a n:href="Create:new">Pridať nový task</a>
